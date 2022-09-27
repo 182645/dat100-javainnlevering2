@@ -41,16 +41,16 @@ class TabellerEnhetsTester {
 	@Test
 	void testtilStreng() {
 
-		assertEquals("[1,4,6]", Tabeller.tilStreng(tabell1));
-		assertEquals("[1]", Tabeller.tilStreng(tabell2));
-		assertEquals("[]", Tabeller.tilStreng(tabell3));
+		assertEquals("[1,4,6]", Tabeller.tilString(tabell1));
+		assertEquals("[1]", Tabeller.tilString(tabell2));
+		assertEquals("[]", Tabeller.tilString(tabell3));
 	}
 
 	@Test
 	void testSummer() {
-		assertEquals(11, Tabeller.summer(tabell1));
-		assertEquals(1, Tabeller.summer(tabell2));
-		assertEquals(0, Tabeller.summer(tabell3));
+		assertEquals(11, Tabeller.summerW(tabell1));
+		assertEquals(1, Tabeller.summerW(tabell2));
+		assertEquals(0, Tabeller.summerW(tabell3));
 	}
 
 	@Test

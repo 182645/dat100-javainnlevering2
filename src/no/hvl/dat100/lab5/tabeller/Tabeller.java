@@ -7,7 +7,7 @@ import static java.lang.Math.*;
 public class Tabeller {
 
 	public static void main(String[] args) {
-		int [] tab1 = {2,6,4,3,8,12};
+		int [] tab1 = {2,4,5,6,8,12};
 		int tall = 12;
 		
 		System.out.print("skrivUt: "); skrivUt(tab1);
@@ -23,6 +23,13 @@ public class Tabeller {
 		System.out.println("Tall finnes i tabell: " + finnesTall(tab1, tall));
 		System.out.println();
 		System.out.println("Posisjon til tall: " + posisjonTall(tab1, tall));
+		System.out.println();
+		System.out.println("Er tabellen sortert? " + erSortert(tab1));
+		System.out.println();
+		reverser(tab1);
+		System.out.print("Reversert tabell: "); skrivUt(tab1);
+		System.out.println("\n");
+		System.out.println("Er tabellen sortert? " + erSortert(tab1));
 		
 	}
 	
@@ -137,17 +144,38 @@ public class Tabeller {
 
 	// f)
 	public static int[] reverser(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("reverser ikke implementert");
 		
+		int i = 0;
+		int b = 0;
+		int c = 0;
+		
+		while (i <= ((tabell.length - 1)/2)) {
+		
+			b = tabell[i];
+			
+			tabell[i] = tabell[tabell.length-1-i];
+			tabell[tabell.length-1-i] = b;
+			i++;
+		}
+		
+		return tabell;
 	}
 
 	// g)
 	public static boolean erSortert(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("erSortert ikke implementert");
+		boolean b = false;
+		
+		for (int i = 1; i < tabell.length; i++)
+			if ((tabell[i-1]) < tabell[i]) {
+				b = true;
+				i++;
+			}
+			else {
+				b = false;
+				break;
+			}
+		
+		return b;
 	}
 
 	// h)
