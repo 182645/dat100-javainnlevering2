@@ -1,16 +1,26 @@
 package no.hvl.dat100.lab6.matriser;
 
 public class Matriser {
+	
+	public static void main (String [] args) {
+		int[][] terreng = { 
+				{ 0, 0, 0, 3, 3, 3, 6, 7, 8, 10 },
+                { 0, 0, 0, 3, 3, 3, 6, 7, 8, 10 },
+                { 0, 0, 0, 3, 3, 3, 6, 7, 8, 10 } };
+		
+		skrivUt(terreng);
+	}
 
 	// a)
 	public static void skrivUt(int[][] matrise) {
 		
-		// TODO
-		throw new UnsupportedOperationException("skrivUt ikke implementert");
+		for(int i : matrise) {
+			
+		}
 	}
 
 	// b)
-	public static String tilStreng(int[][] matrise) {
+	public static String tilString(int[][] matrise) {
 
 		// TODO
 		throw new UnsupportedOperationException("tilStreng ikke implementert");
