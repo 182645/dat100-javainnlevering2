@@ -68,7 +68,9 @@ public class Matriser {
 		int c = 0;
 		int d = 0;
 		
+		//teller opp rader
 		while (b < matrise.length) {
+			//Teller opp koloner
 			while (c < matrise[0].length) {
 				nyTabell[b][c] = matrise[b][c] * tall;
 				c++;
