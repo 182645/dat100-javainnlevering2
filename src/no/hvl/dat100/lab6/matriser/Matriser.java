@@ -5,14 +5,23 @@ public class Matriser {
 	public static void main (String [] args) {
 		int[][] terreng = { 
 				{ 0, 3, 6, 7, 8, 10 },
-                { 0, 0, 0, 3, 3, 3, 6, 7, 8, 10 },
-                { 0, 0, 0, 3, 3, 3, 6, 7, 8, 10 } };
+				{ 7, 2, 9, 4, 3, 17 },
+				{ 2, 0, 4, 5, 9, 13 }};
+		
+		
+		
 		
 		skrivUt(terreng);
+		System.out.println("\n");
+		System.out.println(terreng.length);
+		System.out.println();
+		skrivUt(skaler(2,terreng));
+		
 	}
 
 	// a)
 	public static void skrivUt(int[][] matrise) {
+		
 		
 		for(int [] rad : matrise) {
 			for (int element : rad) {	
@@ -32,10 +41,20 @@ public class Matriser {
 
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
+		int [][] nyTabell = new int [matrise.length][matrise[0].length];
+		int b = 0;
+		int c = 0;
 		
-		// TODO
-		throw new UnsupportedOperationException("skaler ikke implementert");
-	
+		while (b < matrise.length) {
+			while (c < matrise[0].length) {
+				nyTabell[b][c] = matrise[b][c] * tall;
+				c++;
+			}
+			c = 0;
+			b++;
+			
+		}
+		return nyTabell;
 	}
 
 	// d)
