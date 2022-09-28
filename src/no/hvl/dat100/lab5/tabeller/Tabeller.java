@@ -8,28 +8,23 @@ public class Tabeller {
 
 	public static void main(String[] args) {
 		int [] tab1 = {2,4,5,6,8,12};
+		int [] tab2 = {4,2,7,9,3,21};
 		int tall = 12;
 		
 		System.out.print("skrivUt: "); skrivUt(tab1);
 		System.out.println("\n");
-		System.out.println("tilString: " + tilString(tab1));
-		System.out.println();
-		System.out.println("summer med While: " + summerW(tab1));
-		System.out.println();
-		System.out.println("summer med for: " + summerFor(tab1));
-		System.out.println();
-		System.out.println("summer med utvidet for: " + summerUFor(tab1));
-		System.out.println();
-		System.out.println("Tall finnes i tabell: " + finnesTall(tab1, tall));
-		System.out.println();
-		System.out.println("Posisjon til tall: " + posisjonTall(tab1, tall));
-		System.out.println();
-		System.out.println("Er tabellen sortert? " + erSortert(tab1));
-		System.out.println();
+		System.out.println("tilString: " + tilString(tab1) + "\n");
+		System.out.println("summer med While: " + summerW(tab1) + "\n");
+		System.out.println("summer med for: " + summerFor(tab1) + "\n");
+		System.out.println("summer med utvidet for: " + summerUFor(tab1) + "\n");
+		System.out.println("Tall finnes i tabell: " + finnesTall(tab1, tall) + "\n");
+		System.out.println("Posisjon til tall: " + posisjonTall(tab1, tall) + "\n");
+		System.out.println("Er tabellen sortert? " + erSortert(tab1) + "\n");
 		reverser(tab1);
 		System.out.print("Reversert tabell: "); skrivUt(tab1);
 		System.out.println("\n");
-		System.out.println("Er tabellen sortert? " + erSortert(tab1));
+		System.out.println("Er tabellen sortert? " + erSortert(tab1) + "\n");
+		System.out.print("Sette sammen tabeller: "); skrivUt(settSammen(tab1, tab2));
 		
 	}
 	
@@ -93,11 +88,10 @@ public class Tabeller {
 	// c) - utvidet for
 	public static int summerUFor(int[] tabell) {
 		int n = 0;
-		int b = 0;
 		
 		for(int i : tabell) {
-			n += tabell[b];
-			b++;
+			n += i;
+		
 		}
 		
 		return n;
@@ -181,7 +175,16 @@ public class Tabeller {
 	// h)
 	public static int[] settSammen(int[] tabell1, int[] tabell2) {
 
-		// TODO
-		throw new UnsupportedOperationException("settSammen ikke implementert");
+		int nyLengde = tabell1.length + tabell2.length;
+			int[] nyTabell = new int[nyLengde];
+			
+			for(int i=0; i <tabell1.length; i++) {
+				nyTabell[i] = tabell1[i];
+			}
+			
+			for(int j=0; j<tabell2.length; j++) {
+				nyTabell[tabell1.length + j] = tabell2[j];
+			}
+			return nyTabell;
 	}
 }

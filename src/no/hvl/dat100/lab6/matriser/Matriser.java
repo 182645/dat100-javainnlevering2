@@ -4,7 +4,7 @@ public class Matriser {
 	
 	public static void main (String [] args) {
 		int[][] terreng = { 
-				{ 0, 0, 0, 3, 3, 3, 6, 7, 8, 10 },
+				{ 0, 3, 6, 7, 8, 10 },
                 { 0, 0, 0, 3, 3, 3, 6, 7, 8, 10 },
                 { 0, 0, 0, 3, 3, 3, 6, 7, 8, 10 } };
 		
@@ -16,8 +16,9 @@ public class Matriser {
 		
 		for(int [] rad : matrise) {
 			for (int element : rad) {	
-				System.out.print(element + "\t");
+				System.out.print(element + " ");
 			}
+			System.out.print("\n");
 		}
 	}
 
