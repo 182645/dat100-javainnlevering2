@@ -66,6 +66,7 @@ public class Matriser {
 		int [][] nyTabell = new int [matrise.length][matrise[0].length];
 		int b = 0;
 		int c = 0;
+		int d = 0;
 		
 		while (b < matrise.length) {
 			while (c < matrise[0].length) {
