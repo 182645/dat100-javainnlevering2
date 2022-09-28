@@ -14,8 +14,10 @@ public class Matriser {
 	// a)
 	public static void skrivUt(int[][] matrise) {
 		
-		for(int i : matrise) {
-			
+		for(int [] rad : matrise) {
+			for (int element : rad) {	
+				System.out.print(element + "\t");
+			}
 		}
 	}
 
