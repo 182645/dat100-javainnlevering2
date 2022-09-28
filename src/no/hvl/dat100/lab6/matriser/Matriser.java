@@ -1,9 +1,6 @@
 package no.hvl.dat100.lab6.matriser;
 
-import static javax.swing.JOptionPane.*;
 import static java.lang.Integer.*;
-import static java.lang.Math.*;
-
 
 public class Matriser {
 	
@@ -52,7 +49,7 @@ public class Matriser {
 		   String slutt = "\n";
 		   
 		   while(i< matrise.length - 1) {
-			   str = Integer.toString(matrise[i]);
+			   str = Integer.toString(matrise[i][j]);
 			   hjelp = hjelp + str + ",";
 			   i++;
 		   }
