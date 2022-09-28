@@ -1,5 +1,10 @@
 package no.hvl.dat100.lab6.matriser;
 
+import static javax.swing.JOptionPane.*;
+import static java.lang.Integer.*;
+import static java.lang.Math.*;
+
+
 public class Matriser {
 	
 	public static void main (String [] args) {
@@ -37,10 +42,27 @@ public class Matriser {
 	// b)
 	public static String tilString(int[][] matrise) {
 
-		// TODO
-		throw new UnsupportedOperationException("tilStreng ikke implementert");
-		
+
+		   int i = 0;
+		   int b = matrise.length - 1;
+		   
+		   String str = "null";
+		   String hjelp = "";
+		   String start = " ";
+		   String slutt = "\n";
+		   
+		   while(i< matrise.length - 1) {
+			   str = Integer.toString(matrise[i]);
+			   hjelp = hjelp + str + ",";
+			   i++;
+		   }
+		   
+		   hjelp = start + hjelp + matrise[b] + slutt;
+		   return hjelp;
 	}
+
+		
+	
 
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
@@ -62,9 +84,46 @@ public class Matriser {
 
 	// d)
 	public static boolean erLik(int[][] a, int[][] b) {
+			int rad1, kol1, rad2, kol2;
+		
 
-		// TODO
-		throw new UnsupportedOperationException("erLik ikke implementert");
+			boolean lik = true;
+			
+			int[][] terreng1 = {
+					{1,2,3},
+					{4,5,6}
+			};
+			
+			int[][]terreng2 = {
+					{1,2,3},
+					{4,5,6}
+			};
+			
+			rad1 = terreng1.length;
+			kol1 = terreng1[0].length;
+			
+			rad2 = terreng2.length;
+			kol2 = terreng2[0].length;
+			
+			   if(rad1 != rad2 || kol1 != kol2){    
+		            System.out.println("Matrisene er ikke like");    
+		        }    
+		        else {    
+		            for(int i = 0; i < rad1; i++){    
+		                for(int j = 0; j < kol1; j++){    
+		                  if(terreng1[i][j] != terreng2[i][j]){   
+		                	  
+		                      lik = false;    
+		                      break;    
+		                  }    
+		                }    
+		            }    
+		            if(lik)
+		            	System.out.println("Matrisene er lik");
+		            else
+		            	System.out.println("Matrisene er ikke lik");
+		        }
+
 	}
 	
 	// e)
