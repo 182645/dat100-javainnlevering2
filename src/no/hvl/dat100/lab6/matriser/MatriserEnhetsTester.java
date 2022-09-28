@@ -43,7 +43,7 @@ class MatriserEnhetsTester {
 	@Test
 	void testtilStreng() {
 		
-		assertEquals("1 2 3 \n4 5 6 \n7 8 9 \n",Matriser.tilStreng(a));
+		assertEquals("1 2 3 \n4 5 6 \n7 8 9 \n",Matriser.tilString(a));
 	}
 
 	@Test
