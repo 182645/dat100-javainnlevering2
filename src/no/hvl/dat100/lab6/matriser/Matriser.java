@@ -16,7 +16,6 @@ public class Matriser {
 		                 { 2, 0, 4, 5, 12, 17}};
 		
 		 
-		 
 	skrivUt(terreng);
 	System.out.println("\n"); 
 	skrivUt(speile(terreng));
