@@ -15,7 +15,6 @@ public class Matriser {
 		                 { 2, 0, 4, 5, 12, 17}};
 		
 		 
-		 
 	skrivUt(terreng);
 	System.out.println("\n"); 
 	skrivUt(speile(terreng));
@@ -84,24 +83,25 @@ public class Matriser {
 	}
 
 	// d)
+
 	public static boolean erLik(int[][] mat1, int[][] mat2) {
 		int rad1, kol1, rad2, kol2;
 
 		boolean a = true;
 
-		int[][] terreng1 = { { 1, 2, 3 }, 
+		int[][] matrise1 = { { 1, 2, 3 }, 
 							{ 4, 5, 6 } };
 
-		int[][] terreng2 = { { 1, 2, 3 }, 
+		int[][] matrise2 = { { 1, 2, 3 }, 
 							{ 4, 5, 6 } };
 
 		// beregner rader og kolonner i terreng1
-		rad1 = terreng1.length;
-		kol1 = terreng1[0].length;
+		rad1 = matrise1.length;
+		kol1 = matrise1[0].length;
 
 		// beregner rader og kolonner i terreng2
-		rad2 = terreng2.length;
-		kol2 = terreng2[0].length;
+		rad2 = matrise2.length;
+		kol2 = matrise2[0].length;
 
 		// løkke som beregner om matrisene er equal
 		if (rad1 != rad2 || kol1 != kol2) {
@@ -110,7 +110,7 @@ public class Matriser {
 		} else {
 			for (int i = 0; i < rad1; i++) {
 				for (int j = 0; j < kol1; j++) {
-					if (terreng1[i][j] != terreng2[i][j]) {
+					if (matrise1[i][j] != matrise2[i][j]) {
 						a = false;
 
 					}
@@ -120,8 +120,8 @@ public class Matriser {
 
 		return a;
 
-	}
-
+	}    
+		            
 	// e)
 	public static int[][] speile(int[][] matrise) {
 
