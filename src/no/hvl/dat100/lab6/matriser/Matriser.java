@@ -7,7 +7,6 @@ public class Matriser {
 	public static void main(String[] args) {
 
 		
-
 		
 		 int tall = 2; 
 		 int[][] terreng = { 
@@ -15,6 +14,8 @@ public class Matriser {
 		                 { 7, 2, 9, 78, 2, 34}, 
 		                 { 2, 0, 4, 5, 12, 17}};
 		
+		 
+		 
 	skrivUt(terreng);
 	System.out.println("\n"); 
 	skrivUt(speile(terreng));
@@ -24,7 +25,7 @@ public class Matriser {
     boolean a = erLik(null, null);
 	System.out.println("er dette riktig?" + " " + a);
 		 
-
+	
 	}
 
 	// a)
