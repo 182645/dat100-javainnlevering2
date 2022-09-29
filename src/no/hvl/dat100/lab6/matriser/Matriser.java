@@ -86,7 +86,7 @@ public class Matriser {
 			int rad1, kol1, rad2, kol2;
 		
 		
-			boolean b = false;
+			boolean d = false;
 			
 			
 			int[][] terreng1 = {
@@ -106,13 +106,13 @@ public class Matriser {
 			kol2 = terreng2[0].length;
 			
 				if(terreng1.equals(terreng2)) {
-          	  b = true;
+          	  d = true;
 				}
 			
           	  else if (rad1 != rad2 || kol1 != kol2){    
-		            return b;    
+		            
 		        }    
-		       
+				 return d;   
 	}
 		    
 		            
