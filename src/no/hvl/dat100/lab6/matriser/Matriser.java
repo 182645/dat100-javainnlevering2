@@ -37,7 +37,7 @@ public class Matriser {
 	}
 
 	// b)
-	public static String tilString(int[][] matrise) {
+	public static String tilStreng(int[][] matrise) {
 
 
 		   int i = 0;
@@ -49,17 +49,16 @@ public class Matriser {
 		   String slutt = "\n";
 		   
 		   while(i< matrise.length - 1) {
-			   str = Integer.toString(matrise[i][j]);
+			   str = Integer.toString(matrise[i][b]);
 			   hjelp = hjelp + str + ",";
 			   i++;
 		   }
 		   
 		   hjelp = start + hjelp + matrise[b] + slutt;
 		   return hjelp;
+	
 	}
 
-		
-	
 
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
@@ -86,8 +85,9 @@ public class Matriser {
 	public static boolean erLik(int[][] a, int[][] b) {
 			int rad1, kol1, rad2, kol2;
 		
-
-			boolean lik = true;
+		
+			boolean b = false;
+			
 			
 			int[][] terreng1 = {
 					{1,2,3},
@@ -105,26 +105,20 @@ public class Matriser {
 			rad2 = terreng2.length;
 			kol2 = terreng2[0].length;
 			
-			   if(rad1 != rad2 || kol1 != kol2){    
-		            System.out.println("Matrisene er ikke like");    
+				if(terreng1.equals(terreng2)) {
+          	  b = true;
+				}
+			
+          	  else if (rad1 != rad2 || kol1 != kol2){    
+		            return b;    
 		        }    
-		        else {    
-		            for(int i = 0; i < rad1; i++){    
-		                for(int j = 0; j < kol1; j++){    
-		                  if(terreng1[i][j] != terreng2[i][j]){   
-		                	  
-		                      lik = false;    
-		                      break;    
-		                  }    
-		                }    
-		            }    
-		            if(lik)
-		            	System.out.println("Matrisene er lik");
-		            else
-		            	System.out.println("Matrisene er ikke lik");
-		        }
-
+		       
 	}
+		    
+		            
+		            //se på oppgave 1 g og d --> se system print 
+
+	
 	
 	// e)
 	public static int[][] speile(int[][] matrise) {
