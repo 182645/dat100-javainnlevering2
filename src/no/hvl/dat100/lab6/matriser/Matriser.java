@@ -11,7 +11,12 @@ public class Matriser {
 				{ 7, 2, 9, 78, 2, 34},
 				{ 2, 0, 4, 5, 12, 17}};
 		
+		int[][] terreng2 = { 
+				{ 0, 3, 6, 8, 10, 13},
+				{ 7, 2, 9, 78, 2, 34},
+				{ 2, 0, 4, 5, 12, 17}};
 		
+		int [][] ser = {};
 		
 		
 		skrivUt(terreng);
@@ -19,6 +24,7 @@ public class Matriser {
 		skrivUt(speile(terreng));
 		System.out.println("\n");
 		skrivUt(skaler(tall,terreng));
+		System.out.println(erLik(terreng, terreng2));
 		
 	
 		
@@ -62,23 +68,32 @@ public class Matriser {
 
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
-		int [][] nyTabell = new int [matrise.length][matrise[0].length];
+		
 		int b = 0;
 		int c = 0;
-		int d = 0;
 		
-		//teller opp rader
-		while (b < matrise.length) {
-			//Teller opp koloner
-			while (c < matrise[0].length) {
-				nyTabell[b][c] = matrise[b][c] * tall;
-				c++;
-			}
-			c = 0;
-			b++;
-			
+		if (matrise.length == 0) {
+			System.out.println("Ikke innhold i tabellen");
+			return matrise;
 		}
+		else {
+		int [][] nyTabell = new int [matrise.length][matrise[0].length];
+		
+			//teller opp rader
+			while (b < matrise.length) {
+				//Teller opp koloner
+				while (c < matrise[0].length) {
+					nyTabell[b][c] = matrise[b][c] * tall;
+					c++;
+				}
+				c = 0;
+				b++;
+			
+			}
 		return nyTabell;
+		}
+		
+		
 	}
 
 	// d)
