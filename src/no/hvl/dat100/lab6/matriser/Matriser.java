@@ -21,6 +21,8 @@ public class Matriser {
 		
 		skrivUt(terreng);
 		System.out.println("\n");
+		System.out.println("til string:" + "\n" + tilStreng(terreng));
+		System.out.println("\n");
 		skrivUt(speile(terreng));
 		System.out.println("\n");
 		skrivUt(skaler(tall,terreng));
@@ -57,7 +59,7 @@ public class Matriser {
 			i++;
 		}
 
-		hjelp = start + hjelp + matrise[b] + slutt;
+		hjelp = start + hjelp + matrise[matrise.length - 1][b] + slutt;
 		return hjelp;
 
 	}
