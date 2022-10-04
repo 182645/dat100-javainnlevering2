@@ -46,6 +46,7 @@ public class Matriser {
 	public static String tilStreng(int[][] matrise) {
 
 		int i = 0;
+		int j = 0;
 		int b = matrise.length - 1;
 
 		String str = "null";
@@ -53,13 +54,17 @@ public class Matriser {
 		String start = " ";
 		String slutt = "\n";
 
-		while (i < matrise.length - 1) {
-			str = Integer.toString(matrise[i][b]);
-			hjelp = hjelp + str + ",";
+		while (i <= b) {
+			while (j < matrise[0].length - 1) {
+			str = Integer.toString(matrise[i][j]);
+			hjelp = hjelp + str + ", ";
+			j++;
+		}
+			hjelp += matrise[i][j] + "\n";
+			j = 0;
 			i++;
 		}
-
-		hjelp = start + hjelp + matrise[matrise.length - 1][b] + slutt;
+	//	hjelp = start + hjelp + matrise[b][matrise [b].length - 1] + slutt;
 		return hjelp;
 
 	}
