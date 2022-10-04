@@ -3,29 +3,7 @@ package no.hvl.dat100.lab6.matriser;
 import static java.lang.Integer.*;
 
 public class Matriser {
-
-	public static void main(String[] args) {
-
-		
-		
-		 int tall = 2; 
-		 int[][] terreng = { 
-				         { 0, 3, 6, 8, 10, 13}, 
-		                 { 7, 2, 9, 78, 2, 34}, 
-		                 { 2, 0, 4, 5, 12, 17}};
-		
-		 
-	skrivUt(terreng);
-	System.out.println("\n"); 
-	skrivUt(speile(terreng));
-    System.out.println("\n"); 
-    skrivUt(skaler(tall,terreng));
-    skrivUt(terreng);
-    boolean a = erLik(null, null);
-	System.out.println("er dette riktig?" + " " + a);
-		 
 	
-<<<<<<< HEAD
 	public static void main (String [] args) {
 		int tall = 2;
 		int[][] terreng = { 
@@ -48,10 +26,6 @@ public class Matriser {
 		skrivUt(skaler(tall,terreng));
 		System.out.println(erLik(terreng, terreng2));
 		
-	
-		
-=======
->>>>>>> branch 'master' of https://github.com/182645/dat100-javainnlevering2
 	}
 
 	// a)
@@ -90,33 +64,13 @@ public class Matriser {
 
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
-<<<<<<< HEAD
-		
-=======
-		int[][] nyTabell = new int[matrise.length][matrise[0].length];
->>>>>>> branch 'master' of https://github.com/182645/dat100-javainnlevering2
 		int b = 0;
 		int c = 0;
-<<<<<<< HEAD
 		
 		if (matrise.length == 0) {
 			System.out.println("Ikke innhold i tabellen");
 			return matrise;
-=======
-		int d = 0;
-
-		// teller opp rader
-		while (b < matrise.length) {
-			// Teller opp koloner
-			while (c < matrise[0].length) {
-				nyTabell[b][c] = matrise[b][c] * tall;
-				c++;
-			}
-			c = 0;
-			b++;
-
->>>>>>> branch 'master' of https://github.com/182645/dat100-javainnlevering2
-		}
+}
 		else {
 		int [][] nyTabell = new int [matrise.length][matrise[0].length];
 		
