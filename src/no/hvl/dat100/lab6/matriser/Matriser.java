@@ -16,17 +16,16 @@ public class Matriser {
 				{ 7, 2, 9, 78, 2, 34},
 				{ 2, 0, 4, 5, 12, 17}};
 		
-		int [][] ser = {};
-		
 		
 		skrivUt(terreng);
 		System.out.println("\n");
 		System.out.println("til string:" + "\n" + tilStreng(terreng));
 		System.out.println("\n");
-		skrivUt(speile(terreng));
-		System.out.println("\n");
 		skrivUt(skaler(tall,terreng));
+		System.out.println("\n");
 		System.out.println(erLik(terreng, terreng2));
+		System.out.println("\n");
+		skrivUt(speile(terreng));
 		
 	}
 
@@ -51,8 +50,6 @@ public class Matriser {
 
 		String str = "null";
 		String hjelp = "";
-		String start = " ";
-		String slutt = "\n";
 
 		while (i <= b) {
 			while (j < matrise[0].length - 1) {
@@ -105,19 +102,13 @@ public class Matriser {
 
 		boolean a = true;
 
-		int[][] matrise1 = { { 1, 2, 3 }, 
-							{ 4, 5, 6 } };
-
-		int[][] matrise2 = { { 1, 2, 3 }, 
-							{ 4, 5, 6 } };
-
 		// beregner rader og kolonner i terreng1
-		rad1 = matrise1.length;
-		kol1 = matrise1[0].length;
+		rad1 = mat1.length;
+		kol1 = mat1[0].length;
 
 		// beregner rader og kolonner i terreng2
-		rad2 = matrise2.length;
-		kol2 = matrise2[0].length;
+		rad2 = mat2.length;
+		kol2 = mat2[0].length;
 
 		// løkke som beregner om matrisene er equal
 		if (rad1 != rad2 || kol1 != kol2) {
@@ -126,7 +117,7 @@ public class Matriser {
 		} else {
 			for (int i = 0; i < rad1; i++) {
 				for (int j = 0; j < kol1; j++) {
-					if (matrise1[i][j] != matrise2[i][j]) {
+					if (mat1[i][j] != mat2[i][j]) {
 						a = false;
 
 					}
